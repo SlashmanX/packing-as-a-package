@@ -29,4 +29,26 @@ describe('cleanNumbericInput', () => {
 	});
 });
 
-describe('determinePackages', () => {});
+import { determinePackages } from './utils';
+import { PackingItem, Package } from './types';
+
+describe('determinePackages', () => {
+	const items: PackingItem[] = [
+		{ index: 1, weight: 53.38, price: 45 },
+		{ index: 2, weight: 88.62, price: 98 },
+		{ index: 3, weight: 78.48, price: 3 },
+		{ index: 4, weight: 72.3, price: 76 },
+		{ index: 5, weight: 30.18, price: 9 },
+		{ index: 6, weight: 46.34, price: 48 },
+	];
+	const capacity = 81;
+
+	it('should return the correct package object', () => {
+		const expectedOutput: Package = {
+			items: [items[3]],
+			value: 76,
+		};
+		const actualOutput = determinePackages(items, capacity);
+		expect(actualOutput).toEqual(expectedOutput);
+	});
+});

@@ -3,8 +3,10 @@
 <details>
 
 <summary>Challenge Definition and Introduction</summary>
+
 ## Introduction
-You want to send your friend a package with different things. 
+
+You want to send your friend a package with different things.
 Each thing you put inside the package has such parameters as index number, weight and cost. The package has a weight limit. Your goal is to determine which things to put into the package so that the total weight is less than or equal to the package limit and the total cost is as large as possible.
 You would prefer to send a package which weighs less in case there is more than one package with the same price.
 
@@ -65,3 +67,11 @@ Good luck, and have fun!
 </details>
 
 ## Implementation
+
+This solution is based around creating a repository that can be published as an NPM package as as such includes:
+
+-   Auto-linting on commit
+-   Standardized commit messages
+-   GitHub Action to autopublish the `main` branch
+-   Run linting and unit tests when branch pushed (for PRs etc)
+-   (TBC) Auto versioning based on commit messages
