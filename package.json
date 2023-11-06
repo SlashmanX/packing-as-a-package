@@ -11,12 +11,14 @@
 	],
 	"scripts": {
 		"build": "tsc",
+		"ci": "yarn install --frozen-lockfile",
 		"commit": "git-cz",
 		"format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
 		"lint": "eslint --ext .js,.ts ./src",
 		"lint:fix": "yarn lint --fix",
 		"test": "jest",
-		"prepare": "husky install"
+		"prepare": "husky install",
+		"prepublish": "yarn build"
 	},
 	"author": "",
 	"license": "ISC",
