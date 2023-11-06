@@ -24,7 +24,7 @@ export class Packer {
 				determinePackages(items as PackingItem[], weight as number),
 			);
 		});
-		return this._printOutput();
+		return this._formatOutput();
 	}
 
 	/**
@@ -92,7 +92,7 @@ export class Packer {
 	 * @returns {String} string containing indexes of items in each package
 	 */
 
-	_printOutput(): string {
+	_formatOutput(): string {
 		return this.packages
 			.map((pack) => {
 				// eslint-disable-next-line @typescript-eslint/no-unused-vars

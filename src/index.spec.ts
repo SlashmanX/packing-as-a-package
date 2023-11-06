@@ -106,7 +106,7 @@ describe('Packer', () => {
 		});
 	});
 
-	describe('_printOutput', () => {
+	describe('_formatOutput', () => {
 		it('should return the correct string containing indexes of items in each package', () => {
 			const packer = new Packer();
 			packer.packages = [
@@ -133,7 +133,7 @@ describe('Packer', () => {
 				},
 			];
 			const expectedOutput = '2\n-\n1,3,5\n1,3,6';
-			expect(packer._printOutput()).toEqual(expectedOutput);
+			expect(packer._formatOutput()).toEqual(expectedOutput);
 		});
 	});
 });

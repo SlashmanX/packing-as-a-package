@@ -66,12 +66,23 @@ Good luck, and have fun!
 
 </details>
 
+## Usage
+
+```ts
+import { Packer } from 'packing-as-a-package';
+
+...
+
+const result = await P.pack('./path/to/input');
+console.log(result)
+```
+
 ## Implementation
 
 This solution is based around creating a repository that can be published as an NPM package as as such includes:
 
 -   Auto-linting on commit
--   Standardized commit messages
--   GitHub Action to autopublish the `main` branch
+-   Standardized commit messages (using commitizen which triggers on `git commit`)
+-   GitHub Action to autopublish to NPM repository
 -   Run linting and unit tests when branch pushed (for PRs etc)
 -   (TBC) Auto versioning based on commit messages
